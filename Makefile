@@ -1,9 +1,7 @@
-PROGRAM= area
+run: whsp
+	./whsp
 
-run: ${PROGRAM}
-    ./${PROGRAM}
+whsp: whsp.c
+	gcc -Wall -std=c11 whsp.c -o whsp
 
-${PROGRAM}: ${PROGRAM}.c
-    gcc -Wall -std=c11 ${PROGRAM}.c -o ${PROGRAM}
-
-build: ${PROGRAM}
+build: whsp
