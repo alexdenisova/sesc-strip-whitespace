@@ -5,15 +5,11 @@ int main()
 {
 	char str[1000], a[1000][1000];
 	int i=0, j=0, k=0,n;
-
 	scanf ("%[^\n]s", str);
 	int len = strlen(str);
-	if(sscanf(str, "%s", a[j])==EOF){
-		return 0;
-	}else{
-		while (sscanf(str, "%s", a[j])!=EOF){
-			while(str[i]==' '){
-				i++;
+	while (sscanf(str, "%s", a[j])!=EOF){
+		while(str[i]==' '){
+			i++;
 		}
 		while((str[i]==a[j][k]) && (a[j][k]!='\0')){
 			i++;
@@ -29,12 +25,11 @@ int main()
 		k=0;
 		i=0;
 		j++;
-		}
+	}
 
-		for(n=0; n<(j-1); n++){
-			printf("%s ", a[n]);
-	  	}
+	for(n=0; n<(j-1); n++){
+		printf("%s ", a[n]);
+	}
 	printf("%s", a[j-1]);
-  	}
 	return 0;
 }
