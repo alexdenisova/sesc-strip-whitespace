@@ -8,10 +8,6 @@ int main()
 
 	scanf ("%[^\n]s", str);
 	int len = strlen(str);
-	if(sscanf(str, "%s", l)==EOF){
-    		l[0]='\0';
-    		printf("%c", l[0]);
-  	}else{
 	while (sscanf(str, "%s", a[j])!=EOF){
 		while(str[i]==' '){
 			i++;
@@ -36,6 +32,5 @@ int main()
 		printf("%s ", a[n]);
 	}
 	printf("%s", a[j-1]);
-	}
 	return 0;
 }
