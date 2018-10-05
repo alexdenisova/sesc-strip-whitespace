@@ -5,7 +5,6 @@ int main()
 {
 	char str[1000], a[1000][1000];
 	int i=0, j=0, k=0,n;
-
 	scanf ("%[^\n]s", str);
 	int len = strlen(str);
 	while (sscanf(str, "%s", a[j])!=EOF){
