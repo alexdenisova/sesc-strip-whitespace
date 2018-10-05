@@ -3,11 +3,15 @@
 
 int main()
 {
-	char str[1000], a[1000][1000];
+	char str[1000], a[1000][1000], l[3];
 	int i=0, j=0, k=0,n;
 
 	scanf ("%[^\n]s", str);
 	int len = strlen(str);
+	if(sscanf(str, "%s", l)==EOF){
+    		l[0]='\0';
+    		printf("%c", l[0]);
+  	}else{
 	while (sscanf(str, "%s", a[j])!=EOF){
 		while(str[i]==' '){
 			i++;
@@ -32,6 +36,6 @@ int main()
 		printf("%s ", a[n]);
 	}
 	printf("%s", a[j-1]);
-
+	}
 	return 0;
 }
